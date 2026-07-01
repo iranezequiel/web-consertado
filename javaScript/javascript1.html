@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let idade =18;
+        console.log(typeof(idade));
+        console.log(idade);
+        //=================================
+        console.log("String em JS");
+        let nome="Estefany"
+        console.log(typeof(nome));
+        console.log(nome)
+        //=================================
+        console.log("Boolean em JS");
+        let logico=true
+        console.log(typeof(logico));
+        console.log(logico)
+        //=================================
+        let variavelesquecida;
+        console.log(typeof(variavelesquecida));
+        //=================================
+        let telefone = null;
+        console.log(telefone)
+        console.log(typeof(telefone))
+        //=================================
+        
+        //Exemplo trabalhando com Strings
+        console.log(`A ${nome} tem ${idade} anos.`)
+
+        console.log(`<p> <b> ${nome} </b> tem <mark>${idade}</mark> </p>`)
+        
+        document.body.innerHTML=`<p> <b> ${nome} </b> tem <mark>${idade}</mark> </p>`
+
+    </script>
+</body>
+</html>

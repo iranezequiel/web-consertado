@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lista</title>
+
+<style>
+
+body{
+    margin: 0;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.container{
+    background: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+
+.foto{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.nome{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.endereco{
+    font-size: 14px;
+    color: gray;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="usuario">
+        <img class="foto" src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div>
+            <div class="nome">Linda Hart</div>
+            <div class="endereco">6755 Shady Ln Dr</div>
+        </div>
+    </div>
+
+    <div class="usuario">
+        <img class="foto" src="https://randomuser.me/api/portraits/men/32.jpg">
+        <div>
+            <div class="nome">Roger Medina</div>
+            <div class="endereco">2420 Paddock Way</div>
+        </div>
+    </div>
+
+    <div class="usuario">
+        <img class="foto" src="https://randomuser.me/api/portraits/men/76.jpg">
+        <div>
+            <div class="nome">Dean Sullivan</div>
+            <div class="endereco">6727 Airplane Ave</div>
+        </div>
+    </div>
+
+    <div class="usuario">
+        <img class="foto" src="https://randomuser.me/api/portraits/women/65.jpg">
+        <div>
+            <div class="nome">Elizabeth Austin</div>
+            <div class="endereco">6685 Blossom Hill Rd</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

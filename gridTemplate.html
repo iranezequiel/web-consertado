@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <style>
+
+
+
+
+ .container{display: grid;
+           height: 100vh;
+            grid-template-areas: "header header header header "
+                                 "main main . sidebar"   
+                                 "footer footer footer footer";
+       
+        }
+
+        @media (max-width:500px) {
+            .container{display: grid;
+            grid-template-rows: 100px 200px 30vh;
+        grid-template-areas: "cabecario"
+                             "main"   
+                             "sidebar"
+                             "footer";}
+        }
+        .box{border: 1px solid;}
+        #box1{grid-area: header ;  background-color: orange;}
+        #box2{grid-area: main ; background-color: lightblue}
+        #box3{grid-area: sidebar; background-color: red;}
+        #box4{grid-area: footer  ; background-color:  greenyellow;}
+
+     
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">main</div>
+        <div class="box" id="box3">sadbar</div>
+        <div class="box" id="box4">footer</div>
+       
+</body>
+</html>

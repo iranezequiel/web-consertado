@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt{
+            height: 50vh;
+            border: 1px solid black;
+        }
+        #status{
+            height: 1rem;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Texto</h1>
+    <div tabindex="0" id="txt"></div>
+    <div id="status"></div>
+    
+    <canvas id="canvas" height="1080px" width="1920px">
+    </canvas>
+    <script>
+        var tecla
+        var mouse
+        let txt = document.querySelector("#txt")
+        let status = document.querySelector("#status")
+        let canvas=document.querySelector("#canvas")
+        var desenhando= false;
+
+            txt.addEventListener('keypress',(a)=>{
+            tecla =a;
+            txt.innerHTML+=a.key
+        })
+        
+        txt.addEventListener('keydown',(e)=>{
+            if(e.key ==="Backspace"){
+            //remover o ultimo caractere adicionado
+            txt.innerHTML= txt.innerHTML.slice(0,-1)}
+        })
+
+        document.addEventListener('keydown',function(event){
+            status.innerHTML='Evento keydown: '+ event.key;
+        })
+        
+        document.addEventListener('mousemove',(e)=>{
+            status.innerHTML='Posição do mouse: '+e.clientX + ',' + e.clientY
+        })
+        let ctx=canvas.getContext('2d');
+        canvas.addEventListener('mousedown',(e)=>{
+            desenhando=true
+            ctx.moveTo(e.offsetX,e.offsetY);
+        })
+        canvas.addEventListener('mouseup',(e)=>{
+            desenhando=false})
+        canvas.addEventListener('mousemove',(e)=>{
+            mouse=e;
+            if(desenhando){
+            ctx.lineTo(e.offsetX,e.offsetY);
+            ctx.stroke();
+            }
+        })
+
+
+    </script>
+</body>
+</html>

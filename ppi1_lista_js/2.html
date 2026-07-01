@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Clique aqui</button>
+
+    <p id="pstring"></p>
+    <p id="pnumero"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobject"></p>
+    <p id="parray"></p>
+    <p id="poperacoes"></p>
+
+    <script>
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener("click", ()=>{
+            let texto = "olá"
+            let numero = 42
+            let booleano = true
+            let indefinido
+            let nulo = null
+            let objeto = { nome: "João", idade: 20 }
+            let array = [1, 2, 3]
+
+            document.getElementById("pstring").innerText    = "string: " + texto + " | tipo: " + typeof texto
+            document.getElementById("pnumero").innerText    = "number: " + numero + " | tipo: " + typeof numero
+            document.getElementById("pboolean").innerText   = "boolean: " + booleano + " | tipo: " + typeof booleano
+            document.getElementById("pundefined").innerText = "undefined: " + indefinido + " | tipo: " + typeof indefinido
+            document.getElementById("pnull").innerText      = "null: " + nulo + " | tipo: " + typeof nulo
+            document.getElementById("pobject").innerText    = "object: " + JSON.stringify(objeto) + " | tipo: " + typeof objeto
+            document.getElementById("parray").innerText     = "array: " + array + " | tipo: " + typeof array
+
+            console.log("string + number:", texto + numero)
+            console.log("boolean * number:", booleano * numero)
+            console.log("null + number:", nulo + numero)
+
+            document.getElementById("poperacoes").innerText =
+                "string + number: " + (texto + numero) +
+                " | boolean * number: " + (booleano * numero) +
+                " | null + number: " + (nulo + numero)
+        })
+    </script>
+</body>
+</html>

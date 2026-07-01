@@ -1,0 +1,35 @@
+body {
+    background-color: lightgray;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: blue;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+button, input[type="submit"] {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: red;
+}

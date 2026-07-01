@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-areas:
+                "header header"
+                "nav content"
+                "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 150px 1fr;
+        }
+
+        .box { border: 1px solid black; padding: 10px; }
+
+        #header  { grid-area: header;  background-color: #c0457a; text-align: center; }
+        #nav     { grid-area: nav;     background-color: #a0a85a; }
+        #content { grid-area: content; background-color: #e8e0c8; }
+        #footer  { grid-area: footer;  background-color: #3abfb0; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="header">Header</div>
+        <div class="box" id="nav">Nav</div>
+        <div class="box" id="content">Content</div>
+        <div class="box" id="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-areas:
+                "header header header"
+                "leftaside banner rightaside"
+                "leftaside maincontent rightaside"
+                "leftaside lowcontent rightaside"
+                "footer footer footer";
+            grid-template-columns: 120px 1fr 120px;
+            grid-template-rows: auto auto 1fr auto auto;
+        }
+
+        .box { border: 1px solid black; padding: 10px; }
+
+        #header     { grid-area: header;      background-color: #f0c040; text-align: center; }
+        #banner     { grid-area: banner;      background-color: #e04040; text-align: center; }
+        #leftaside  { grid-area: leftaside;   background-color: #40a040; }
+        #rightaside { grid-area: rightaside;  background-color: #e0a030; }
+        #maincontent{ grid-area: maincontent; background-color: #4080e0; text-align: center; padding: 40px 10px; }
+        #lowcontent { grid-area: lowcontent;  background-color: #60b060; }
+        #footer     { grid-area: footer;      background-color: #4060c0; text-align: center; color: white; }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "banner"
+                    "leftaside"
+                    "maincontent"
+                    "rightaside"
+                    "lowcontent"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="header">Header</div>
+        <div class="box" id="banner">Banner</div>
+        <div class="box" id="leftaside">Left Aside</div>
+        <div class="box" id="maincontent">Main Content</div>
+        <div class="box" id="rightaside">Right Aside</div>
+        <div class="box" id="lowcontent">Low Content</div>
+        <div class="box" id="footer">Footer</div>
+    </div>
+</body>
+</html>

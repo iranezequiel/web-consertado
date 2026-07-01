@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #box-div-4{position: relative;left:50px; top:-30px}
+        .container{display: flex;
+            height: 100vh;
+            flex-direction: row;
+            justify-content: space-around /* controla exibição no eixo do flex */;
+            align-items: center /* eixo perpendicular ao flex-direction */;
+
+        }
+        .box{background-color: aqua;
+            border: 1px solid orange;
+            flex-grow: 1;
+        }
+        .box:hover{flex-grow: 5;
+            transition:all 2s ;
+            
+        }
+        #box-div-1{order:6;}
+        #box-div-3{order:4;}
+        #box-div-5{order:5;}
+        
+    </style>
+
+
+</head>
+<body>
+   
+<div class="container">
+    <div class="box" id="box-div-1">1</div>
+    <div class="box" id="box-div-2">2</div>
+    <div class="box" id="box-div-3">3</div>
+    <div class="box" id="box-div-4">4</div>
+    <div class="box" id="box-div-5">5</div>
+</div>
+
+<div class="container">
+    <span class="box" id="box-span-1">1</span>
+    <span class="box" id="box-span-2">2</span>
+    <span class="box" id="box-span-3">3</span>
+    <span class="box" id="box-span-4">4</span>
+    <span class="box" id="box-span-5">5</span>
+</div>
+</body>
+</html>

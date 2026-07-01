@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Barquinho</title>
+
+<style>
+
+body{
+    margin: 0;
+    background: lightblue;
+}
+
+#mar{
+    width: 100%;
+    height: 150px;
+    background: blue;
+    position: fixed;
+    bottom: 0;
+}
+
+#barco{
+    font-size: 50px;
+    position: fixed;
+    bottom: 120px;
+    left: 0;
+    animation: andar 8s linear infinite, balanco 2s infinite;
+}
+#sol{
+    position: fixed;
+    font-size: 100px;
+    top: 50px;
+    animation: sol 15s linear infinite;
+
+}
+@keyframes andar {
+    from{ left: 100vw; }
+    to{ left: 0vw; }
+}
+
+@keyframes balanco {
+    0%{ transform: rotate(-5deg); }
+    50%{ transform: rotate(5deg); }
+    100%{ transform: rotate(-5deg); }
+}
+
+#nuvem{
+    font-size: 100px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    animation: nuvem 20s linear infinite;
+}
+
+@keyframes nuvem {
+    from{ left: 100vw; }
+    to{ left: 0vw; }
+}
+@keyframes sol {
+    from{ left: 80vw; }
+    to{ left: 0vw; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="mar"></div>
+
+<span id="barco">🚤</span>
+
+<span id="nuvem">☁️</span>
+
+<span id="sol">🌞</span>
+</body>
+</html>

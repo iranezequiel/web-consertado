@@ -1,0 +1,13 @@
+O QUE É FLEX: No css flex é uma propriedade de exibição(display)
+
+COMO DEFINIR ALGO COMO FLEX *{display: flex;}
+
+DEFINIÇÃO: flex é um mecanismo de posicionamento ou gerenciador de layout, linear
+
+FLUXO DO TEXTO:
+display: inline | block
+
+POSITION:
+position: static; relative; absolute; fixed;
+
+FLEX:

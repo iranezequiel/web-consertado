@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-areas:
+                "a  a  .      b"
+                "c  inner inner inner";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        #a     { grid-area: a;     background-color: #555; color: white; padding: 10px; }
+        #b     { grid-area: b;     background-color: #555; color: white; padding: 10px; }
+        #c     { grid-area: c;     background-color: #555; color: white; padding: 10px; }
+        #inner { grid-area: inner; background-color: #444; padding: 10px; }
+
+        .inner-grid {
+            display: grid;
+            grid-template-areas:
+                "e f g"
+                "m i j";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+            height: 100%;
+        }
+
+        .inner-box { background-color: #ccc; padding: 10px; }
+
+        #e { grid-area: e; }
+        #f { grid-area: f; }
+        #g { grid-area: g; }
+        #m { grid-area: m; }
+        #i { grid-area: i; }
+        #j { grid-area: j; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="a">A</div>
+        <div id="b">B</div>
+        <div id="c">C</div>
+        <div id="inner">
+            <div class="inner-grid">
+                <div class="inner-box" id="e">E</div>
+                <div class="inner-box" id="f">F</div>
+                <div class="inner-box" id="g">G</div>
+                <div class="inner-box" id="m">M</div>
+                <div class="inner-box" id="i">I</div>
+                <div class="inner-box" id="j">J</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

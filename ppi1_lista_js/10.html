@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 5px;
+            width: fit-content;
+        }
+        .calc button {
+            height: 60px;
+            font-size: 18px;
+        }
+        #display {
+            grid-column: span 4;
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            padding: 0 10px;
+        }
+        #btnIgual {
+            grid-row: span 2;
+            background-color: #e0ca00;
+            color: white;
+        }
+        #btnAC {
+            background-color: #e0ca00;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <input type="text" id="display" value="0" readonly>
+
+        <button onclick="op('+')">+</button>
+        <button onclick="op('-')">-</button>
+        <button onclick="op('*')">×</button>
+        <button onclick="op('/')">÷</button>
+
+        <button onclick="digito('7')">7</button>
+        <button onclick="digito('8')">8</button>
+        <button onclick="digito('9')">9</button>
+        <button id="btnIgual" onclick="calcular()">=</button>
+
+        <button onclick="digito('4')">4</button>
+        <button onclick="digito('5')">5</button>
+        <button onclick="digito('6')">6</button>
+
+        <button onclick="digito('1')">1</button>
+        <button onclick="digito('2')">2</button>
+        <button onclick="digito('3')">3</button>
+
+        <button onclick="digito('0')">0</button>
+        <button onclick="digito('.')">.</button>
+        <button id="btnAC" onclick="limpar()">AC</button>
+    </div>
+
+    <script>
+        let display = document.getElementById("display")
+        let numA = ""
+        let operador = ""
+        let digitandoB = false
+
+        function digito(d) {
+            if (digitandoB) {
+                if (display.value === "0") display.value = d
+                else display.value += d
+            } else {
+                if (display.value === "0") display.value = d
+                else display.value += d
+            }
+        }
+
+        function op(o) {
+            numA = display.value
+            operador = o
+            digitandoB = true
+            display.value = "0"
+        }
+
+        function calcular() {
+            let numB = display.value
+            let resultado = 0
+            switch (operador) {
+                case "+": resultado = parseFloat(numA) + parseFloat(numB); break
+                case "-": resultado = parseFloat(numA) - parseFloat(numB); break
+                case "*": resultado = parseFloat(numA) * parseFloat(numB); break
+                case "/": resultado = parseFloat(numA) / parseFloat(numB); break
+            }
+            display.value = resultado
+            digitandoB = false
+            operador = ""
+        }
+
+        function limpar() {
+            display.value = "0"
+            numA = ""
+            operador = ""
+            digitandoB = false
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorteio de Números</h1>
+
+    <label for="min">Mínimo:</label>
+    <input type="number" id="min">
+    <label for="max">Máximo:</label>
+    <input type="number" id="max"><br><br>
+
+    <button id="btn">Sortear</button>
+
+    <p id="resultado"></p>
+    <div id="lista"></div>
+
+    <script>
+        let sorteados = []
+        let btn = document.getElementById("btn")
+
+        btn.addEventListener("click", ()=>{
+            let min = parseInt(document.getElementById("min").value)
+            let max = parseInt(document.getElementById("max").value)
+
+            if (isNaN(min) || isNaN(max)) {
+                alert("Informe os valores mínimo e máximo!")
+                return
+            }
+
+            let numero = Math.floor(Math.random() * (max - min + 1)) + min
+
+            let encontrado = sorteados.find(s => s.numero === numero)
+            if (encontrado) {
+                encontrado.vezes++
+            } else {
+                sorteados.push({ numero: numero, vezes: 1 })
+            }
+
+            document.getElementById("resultado").innerText = "Número sorteado: " + numero
+
+            let lista = document.getElementById("lista")
+            lista.innerHTML = ""
+            for (let i = 0; i < sorteados.length; i++) {
+                let s = sorteados[i]
+                let texto = s.numero
+                if (s.vezes > 1) {
+                    texto += " (sorteado " + s.vezes + " vezes)"
+                }
+                lista.innerHTML += texto + "<br>"
+            }
+        })
+    </script>
+</body>
+</html>

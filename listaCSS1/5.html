@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Currículo</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e5e5e5;
+}
+
+/* CONTAINER */
+.container {
+    width: 900px;
+    margin: 30px auto;
+    display: flex;
+    background: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #3d4047;
+    color: white;
+    padding: 20px;
+}
+
+/* FOTO */
+#foto {
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* TITULOS SIDEBAR */
+.sidebar h3 {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* TEXTO SIDEBAR */
+.sidebar p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* CONTEUDO */
+.conteudo {
+    flex: 1;
+    padding: 25px;
+    position: relative;
+}
+
+/* NOME */
+.nome {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.nome h1 {
+    margin: 0;
+}
+
+/* LINHA */
+.nome::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+}
+
+/* DESCRIÇÃO */
+.descricao {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* TITULO SESSAO */
+h2 {
+    margin-top: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* JOB */
+.job {
+    position: relative;
+    margin-top: 15px;
+}
+
+/* TITULO JOB */
+.job strong {
+    font-size: 14px;
+}
+
+/* DATA */
+.data {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: gray;
+    font-size: 13px;
+}
+
+/* EMPRESA */
+.job em {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+/* LISTA */
+ul {
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <img id="foto" src="../imgs/cachorrinho.jpg" alt="Foto">
+
+        <h3>Pessoal</h3>
+
+        <p><strong>Nome</strong><br>Joana Barbosa</p>
+
+        <p><strong>Endereço</strong><br>
+        Rua da Paz, 250<br>
+        7100-111 Lisboa</p>
+
+        <p><strong>Número de telefone</strong><br>
+        963000121</p>
+
+        <p><strong>Email</strong><br>
+        exemplo@cvmaker.pt</p>
+
+        <h3>Interesses</h3>
+        <p>Marketing, leitura, viagens</p>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="conteudo">
+
+        <div class="nome">
+            <h1>Joana Barbosa</h1>
+        </div>
+
+        <p class="descricao">
+            Uma marketer digital com sentido de missão com mais de três anos de experiência em conduzir iniciativas promocionais.
+            Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar,
+            aptidões interpessoais e trabalho bem sob pressão de forma a atingir os objetivos.
+        </p>
+
+        <h2>Experiência profissional</h2>
+
+        <div class="job">
+            <strong>Junior SEO Marketer</strong>
+            <span class="data">2017 - 2019</span>
+
+            <em>Cyanza, Lisboa</em>
+
+            <ul>
+                <li>Página on/off SEO</li>
+                <li>Estratégias de linkbuilding</li>
+                <li>Criação de conteúdo relevante</li>
+                <li>Trabalho com ferramentas online</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <strong>Assistente de Vendas</strong>
+            <span class="data">2015 - 2016</span>
+
+            <em>Salsa, Lisboa</em>
+
+            <ul>
+                <li>Contribuição para objetivos de vendas</li>
+                <li>Gestão de inventário</li>
+                <li>Apoio a clientes</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

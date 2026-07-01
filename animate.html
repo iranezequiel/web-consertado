@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacao</title>
+
+    <style>
+
+        #coracao{
+            display: inline-block;
+            font-size: 100px;
+            animation: voar 1s linear 0s infinite ;
+        }
+        @keyframes voar {
+            0%{font-size: 1px;
+                transform: rotate(0deg);
+            }
+
+            100%{font-size: 100px;
+            transform: rotate(360deg );
+            }
+
+        }
+        img{width: 10vw;
+        animation: voar 1s linear 0s infinite;
+        }
+        #foguete{
+            font-size: 40px;
+            display: inline-block;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            transform: rotate(-45deg);
+            animation: lancamento 5s ease-in infinite;
+        }
+        @keyframes lancamento {
+            from{}
+            to{
+                bottom: 100vh;
+                left: 0px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <img src="./imgs/kurapika.jpg" alt="">
+    <span id="coracao">❤️</span>
+    <span id="explosao">💥</span>
+
+</body>
+</html>

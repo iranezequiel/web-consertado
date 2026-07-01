@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h1>Formulário de Contato</h1>
+
+<p>Preencha o formulário abaixo com suas informações.</p>
+
+<hr>
+
+<form>
+
+    <!-- Nome -->
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+
+    <!-- Email -->
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
+
+    <!-- Assunto -->
+    <label for="assunto">Assunto:</label><br>
+    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto"><br><br>
+
+    <!-- Estado -->
+    <label for="estado">Estado:</label><br>
+    <select id="estado" name="estado">
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+    </select><br><br>
+
+    <!-- Mensagem -->
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea><br><br>
+
+    <!-- Botão -->
+    <button type="submit">Enviar</button>
+
+</form>
+
+<hr>
+
+<p>
+    <a href="4_curriculo.html">Voltar para o currículo</a>
+</p>
+
+</body>
+</html>

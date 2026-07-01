@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Layout</title>
+
+<style>
+
+body{
+    margin: 0;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    gap: 30px; /* mais espaço */
+    align-items: center;
+}
+
+/* pequenas */
+.pequena img{
+    width: 120px;   /* maior */
+    height: 500px;  /* maior */
+    border-radius: 60px; /* mais arredondado */
+    object-fit: cover;
+}
+
+/* grande */
+.grande img{
+    width: 800px;   /* bem maior */
+    height: 500px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="pequena">
+        <img src="../imgs/download.jpg">
+    </div>
+
+    <div class="grande">
+        <img src="../imgs/cachorrinho.jpg">
+    </div>
+
+    <div class="pequena">
+        <img src="../imgs/OnePiece.jpg">
+    </div>
+
+    <div class="pequena">
+        <img src="../imgs/Zoro.jpg">
+    </div>
+    <div class="pequena">
+        <img src="../imgs/RequestResponde.jpg">
+    </div>
+
+</div>
+
+</body>
+</html>

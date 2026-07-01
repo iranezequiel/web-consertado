@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="alert('Olá!')">Clique</button>
+
+
+    <script>
+        alert("ALERTA NA TAG SCRIPT");
+        document.querySelector("button").innerHTML="Amanhã é sábado";
+        var i=0;//Global
+        let j=0;//Visivel apenas para blocos ligados
+        
+        let dia=3;
+        switch(dia){
+            case 1:console.log("Domingo");
+            break;
+            case 2: console.log("Segunda");
+            break;
+            case 3: console.log("Terça");
+            break;
+            case 4:console.log("Quarta");
+            break;
+            case 5: console.log("Quinta");
+            break;
+            case 6: console.log("Sexta");
+            break;
+            case 7: console.log("Sábado");
+            break;
+            default:console.error("Dia Inválido")
+        }
+    
+        console.clear();
+        for(let i =10;i>0;i--){
+            console.log(`Contando ${i} segundos`)
+        }
+        console.clear();
+        let k=10;
+        while(k>=0){
+            console.log(`Contando ${k} segundos`)
+            k--
+        }
+        function media(nota1,nota2){
+            return((nota1+nota2)/2)
+        }
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>
